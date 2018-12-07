@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cars extends Model
 {
-    protected $table = 'cars';
+    protected $table = 'api';
 
+    /**Colunas que do BD  */
     protected $fillable = [
         'name',
         'description',
@@ -19,4 +20,6 @@ class Cars extends Model
     protected $casts = [
         'date' => 'Timestamp'
     ];
+
+    public $timestamps = false;
 }
